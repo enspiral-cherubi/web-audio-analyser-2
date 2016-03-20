@@ -27,10 +27,12 @@ someSourceNode.connect(analyser)
 analyser.connect(someDestinationNode)
 
 var interval = setInterval(function () {
-  var equalTemperedFrequencyData = analyser.equalTemperedFrequencyData()
-  console.log('equalTemperedFrequencyData: ', equalTemperedFrequencyData)
+  var equalTemperedFrequencyData = analyser.equalTemperedFrequencyData(8)
+  console.log('equalTemperedFrequencyData.frequencies: ', equalTemperedFrequencyData.frequencies)
+  console.log('equalTemperedFrequencyData.overallAmplitude: ', equalTemperedFrequencyData.overallAmplitude)
 
   var barkScaleFrequencyData = analyser.barkScaleFrequencyData()
-  console.log('barkScaleFrequencyData: ', barkScaleFrequencyData)
+  console.log('barkScaleFrequencyData.frequencies: ', barkScaleFrequencyData.frequencies)
+  console.log('barkScaleFrequencyData.overallAmplitude: ', barkScaleFrequencyData.overallAmplitude)
 }, 50)
 ```

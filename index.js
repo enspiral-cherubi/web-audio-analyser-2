@@ -30,10 +30,15 @@ var webAudioAnalyser2 = function (params) {
   analyser.equalTemperedFrequencyData = function () {
     this.getByteFrequencyData(frequencyDataArray)
 
-    return sliceRanges.map(function (sliceRange) {
+    var equalTemperedFrequencies = sliceRanges.map(function (sliceRange) {
       var slice = frequencyDataArray.slice(sliceRange.start, sliceRange.end)
       return parseInt(average(slice))
     })
+
+    return {
+      frequencies: equalTemperedFrequencies,
+      overallAmplitude: average(equalTemperedFrequencies)
+    }
   }
   ///////////////////////////////////////////////////
 
@@ -57,9 +62,14 @@ var webAudioAnalyser2 = function (params) {
   analyser.barkScaleFrequencyData = function () {
     this.getByteFrequencyData(frequencyDataArray)
 
-    return barkIndices.map(function (barkIndex) {
+    var barkScaleFrequencies = barkIndices.map(function (barkIndex) {
       return frequencyDataArray[barkIndex]
     })
+
+    return {
+      frequencies: barkScaleFrequencies,
+      overallAmplitude: average(barkScaleFrequencies)
+    }
   }
   ///////////////////////////////////////////////////
 
