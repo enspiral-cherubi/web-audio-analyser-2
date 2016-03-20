@@ -3,7 +3,7 @@
 returns a web audio `AnalyserNode` with the following extensions:
 
 - `equalTemperedFrequencyData(binCount)`
-- ~~`barkScaleFrequencyData`~~ TODO
+- `barkScaleFrequencyData()`
 - ~~`on('beat')`~~ TODO
 - ~~`loudness`~~ TODO
 
@@ -27,7 +27,10 @@ someSourceNode.connect(analyser)
 analyser.connect(someDestinationNode)
 
 var interval = setInterval(function () {
-  var frequencyData = analyser.equalTemperedFrequencyData()
-  console.log('frequencyData: ', frequencyData)
+  var equalTemperedFrequencyData = analyser.equalTemperedFrequencyData()
+  console.log('equalTemperedFrequencyData: ', equalTemperedFrequencyData)
+
+  var barkScaleFrequencyData = analyser.barkScaleFrequencyData()
+  console.log('barkScaleFrequencyData: ', barkScaleFrequencyData)
 }, 50)
 ```
