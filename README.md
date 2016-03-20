@@ -5,7 +5,6 @@ returns a web audio `AnalyserNode` with the following extensions:
 - `equalTemperedFrequencyData(binCount)`
 - `barkScaleFrequencyData()`
 - ~~`on('beat')`~~ TODO
-- ~~`loudness`~~ TODO
 
 ## install
 
