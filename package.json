@@ -1,0 +1,35 @@
+{
+  "name": "web-audio-analyser-2",
+  "version": "1.0.0",
+  "description": "returns an extended web audio AnalyserNode",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enspiral-cherubi/web-audio-analyser-2.git"
+  },
+  "keywords": [
+    "web",
+    "audio",
+    "audio",
+    "analyser",
+    "analyserNode",
+    "spectrum",
+    "frequency",
+    "equal",
+    "tempered"
+  ],
+  "author": "data-doge <eugene@enspiral.com> (http://fuckafucka.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/enspiral-cherubi/web-audio-analyser-2/issues"
+  },
+  "homepage": "https://github.com/enspiral-cherubi/web-audio-analyser-2#readme",
+  "dependencies": {
+    "average": "0.0.1",
+    "lodash.range": "^3.1.3",
+    "log-scale": "^1.0.1"
+  }
+}
