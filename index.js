@@ -49,6 +49,8 @@ var webAudioAnalyser2 = function (params) {
   // https://www.wikiwand.com/en/Bark_scale
   // http://stackoverflow.com/questions/14789283/what-does-the-fft-data-in-the-web-audio-api-correspond-to
   var barkFrequencies = [60, 150, 250, 350, 450, 570, 700, 840, 1000, 1170, 1370, 1600, 1850, 2150, 2500, 2900, 3400, 4000, 4800, 5800, 7000, 8500, 10500, 13500]
+  if (params.addSubBassToBarkScale) { barkFrequencies.unshift(20) }
+  
   var bandSpacing = params.context.sampleRate / analyser.fftSize
 
   var frequencies = range(0, frequencyDataArray.length).map(function (n) {
